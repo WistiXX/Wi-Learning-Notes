@@ -4,7 +4,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/WistiXX/Learning-Notes?style=for-the-badge)](https://github.com/WistiXX/Learning-Notes/commits/main)
 [![License](https://img.shields.io/badge/license-CC--BY--NC--4.0-green?style=for-the-badge)](https://creativecommons.org/licenses/by-nc/4.0/)
 
-**知行合一的学习旅程记录** | [📧 联系我](mailto:w2190ttt@gmail.com)
+**结构化学习仓库** | 📧 联系我：w2190ttt@gmail.com
 
 > "非学无以广才，非志无以成学。" - 诸葛亮‌
 
@@ -26,7 +26,7 @@ git clone git@github.com:WistiXX/Learning-Notes.git
 欢迎通过以下方式让这个知识库变得更好：
 1. 提交Issue报告文档问题
 2. Fork后发起Pull Request
-3. 通过邮箱联系我
+3. 通过邮箱随时联系我
 
 ---
 
