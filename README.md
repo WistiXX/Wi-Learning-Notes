@@ -13,7 +13,6 @@
 ## 🛠️ 如何使用这些笔记
 ```bash
 # 克隆仓库（建议使用SSH）
-git clone git@github.com:WistiXX/Learning-Notes.git
 ```
 - 查看方式：
   - **Obsidian**：最佳阅读体验
