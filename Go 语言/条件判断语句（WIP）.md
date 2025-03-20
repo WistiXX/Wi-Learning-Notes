@@ -1,0 +1,126 @@
+go拥有下列判断语句
+* **`if`**
+	* **`if...else`**
+	* **`if嵌套`**
+* **`switch`**
+* **`select`**
+# `If`语句
+## 基本格式：
+```go
+if 布尔表达式 {
+	//为true时执行
+}
+```
+## `If...else`格式
+格式为：
+```go
+if 布尔表达式 {
+	//为true时执行
+} else {
+	//为false时执行
+}
+```
+例子：
+```go
+var a1,a2,a3=1,2,3
+if a1+a2==a3 {
+	fmt.Print("输出true语句")
+}else {
+	fmt.Print("输出false语句")
+}
+```
+**输出为：`输出true语句`**
+## `if`嵌套格式
+就是表面意思，if中嵌套`if`/`else`
+```go
+package main
+
+import "fmt"
+
+func main() {
+   /* 定义局部变量 */
+   var a int = 100
+   var b int = 200
+ 
+   /* 判断条件 */
+   if a == 100 {
+       /* if 条件语句为 true 执行 */
+       if b == 200 {
+          /* if 条件语句为 true 执行 */
+          fmt.Printf("a 的值为 100 ， b 的值为 200\n" );
+       }
+   }else{
+   fmt.Print("！！！")
+   }
+}
+```
+**输出为：`a 的值为 100 ， b 的值为 200`**
+***
+# `switch`语句
+## 基本语法
+```go
+switch 表达式 {
+    case 变量1:
+        ...
+    case 变量2，变量3:
+        ...
+    case 变量4:
+	    ...
+    default:
+        ...
+}
+```
+将表达式从上到下逐一进行判断，当与`case`后的变量一致时视为成功匹配，匹配成功将执行那句`case`中的代码
+* **多值匹配**：一个`case`的值必须是唯一不重复的，但可添加用逗号隔开的多个值，只要有一个匹配上了就算匹配成功
+* **自动跳出**：当`case`执行完毕后将自动跳出`switch`，无需手动添加`break`。如果想执行后续`case`，可使用`fallthrough`关键字
+* **默认分支**：`default`为可选分支，如果全部`case`都不匹配将执行`default`，与上下位置无关
+例子：
+```go
+day := 3
+switch day {
+case 1:
+    fmt.Println("Monday")
+case 2:
+    fmt.Println("Tuesday")
+case 3:
+    fmt.Println("Wednesday")
+default:
+    fmt.Println("Other day")
+}
+```
+**输出为：`Wednesday`**
+## `fallthrough`关键字
+使用`fallthrough`关键字可以强制执行下一个`case`，执行完毕后退出`switch`
+```go
+num := 2
+switch num {
+case 1:
+    fmt.Println("One")
+case 2:
+    fmt.Println("Two")
+    fallthrough  // 继续执行下一个case
+case 3:
+    fmt.Println("Three")
+default:
+    fmt.Println("Other")
+}
+```
+**输出为：`Two Three`**
+## 省略表达式的条件判断
+当`switch`后不带表达式时，`case`可包含布尔表达式，这将类似于`if...else`语句
+```go
+score := 85
+switch {
+case score >= 90:
+    fmt.Println("A")
+case score >= 80:
+    fmt.Println("B")  // 匹配此分支
+case score >= 70:
+    fmt.Println("C")
+default:
+    fmt.Println("D")
+}
+```
+**输出为：`B`**
+## 类型断言（`Type Switch`）
+后期更新，因为需要接触到`接口`
